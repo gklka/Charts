@@ -44,8 +44,8 @@ types are aliased to either their UI* implementation (on iOS) or their NS* imple
     {
         @objc var nsuiIsScrollEnabled: Bool
         {
-            get { return isScrollEnabled }
-            set { isScrollEnabled = newValue }
+            get { return self.panGestureRecognizer.isEnabled }
+            set { self.panGestureRecognizer.isEnabled = newValue }
         }
     }
     
